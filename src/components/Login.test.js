@@ -36,3 +36,9 @@ test('login BTN should be disabled', ()=> {
     const btnInputElement = screen.getByRole('button')
     expect(btnInputElement).toBeDisabled()
 })
+
+test('error message should be invisible', ()=> {
+    render(<Login/>);
+    const errElement = screen.getByTestId('error')
+    expect(errElement).not.toBeVisible()
+})
